@@ -1,0 +1,22 @@
+{
+    "domain" :"bun.com",
+    "group" : [
+        {
+            "name" : "Employees"
+        }
+    ],
+    
+    "user": [
+        {
+            "name": "Ron Wisly",
+            "Password": "Pass;)123",
+            "group": ["Employees"]
+        },
+        
+        {
+            "name": "Harry potter",
+            "Password": "Pass:(123",
+            "group": ["Employees"]
+        }
+    ]
+}
