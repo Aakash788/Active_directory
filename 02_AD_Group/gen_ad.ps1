@@ -17,7 +17,7 @@ function CreateADUser() {
     $principalName =$username
 
     #creating new user
-    New-ADUser -Name "$name" -GivenName $firstname -Surname $lastname -SamAccountName $samAccountName -UserPrincipalName $principalName@$Global:Domain -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force )-PassThru | Enable ADAccount 
+    New-ADUser -Name "$name" -GivenName $firstname -Surname $lastname -SamAccountName $samAccountName -UserPrincipalName $principalName@$Global:Domain -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force )-PassThru | Enable-ADAccount 
     # Write-Output $userObject
     foreach ($group_name in $gruopObject.groups){
         try{
