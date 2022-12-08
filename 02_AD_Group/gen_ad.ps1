@@ -17,7 +17,7 @@ function CreateADUser() {
     $principalName =$username
 
     #creating new user
-    Add-ADUser -Name "$name" -GivenName $firstname -Surname $lastname -SamAccountName $samAccountName -UserPrincipalName $principalName@$Globle:Domain -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force )-PassThru | Enable ADAccount 
+    New-ADUser -Name "$name" -GivenName $firstname -Surname $lastname -SamAccountName $samAccountName -UserPrincipalName $principalName@$Global:Domain -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force )-PassThru | Enable ADAccount 
     # Write-Output $userObject
     foreach ($group_name in $gruopObject.groups){
         try{
@@ -31,7 +31,7 @@ function CreateADUser() {
 
 }
 $json = (Get-Content $JsonFile | ConvertFrom-Json)
-$Globle:Domain = $json.domain
+$Global:Domain = $json.domain
 foreach ($group in $json.groups){
     CreateADGruop $group
 }
