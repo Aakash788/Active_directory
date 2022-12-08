@@ -1,0 +1,11 @@
+Manager
+Executive
+Student
+lawyer
+Partner
+Customers
+Suppliers
+Bots
+Social
+Marketing
+Designer

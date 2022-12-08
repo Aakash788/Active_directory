@@ -12,7 +12,7 @@ function CreateADUser() {
     $password=$userObject.password
     # genrate "first initial,last name" as a user name
     $firstname , $lastname = $name.split(" ")
-    $username =($firstname[1]+$lastname).ToLower()
+    $username =($firstname[0]+$lastname).ToLower()
     $samAccountName =$username
     $principalName =$username
 
